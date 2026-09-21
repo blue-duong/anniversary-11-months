@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Quicksand', system-ui, sans-serif;
+  touch-action: manipulation;
+}
+
+body {
+  background: linear-gradient(180deg, #fff8e7 0%, #f0e6d6 100%);
+}
+
+.romantic-font {
+  font-family: 'Dancing Script', cursive;
+}
+
+.cute-font {
+  font-family: 'Quicksand', sans-serif;
+}
+
+canvas {
+  display: block;
+  image-rendering: auto;
+}
+
+.btn-cute {
+  @apply px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-lg;
+}
+
+.btn-primary {
+  @apply bg-gradient-to-r from-dino-teal to-dino-green text-white hover:shadow-xl;
+}
+
+.btn-pink {
+  @apply bg-gradient-to-r from-soft-pink to-lavender text-white;
+}
+
+.glass {
+  @apply bg-white/30 backdrop-blur-md border border-white/40;
+}
+
+.no-select {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
